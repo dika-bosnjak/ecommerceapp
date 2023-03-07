@@ -1,0 +1,114 @@
+[
+    {
+        "Name": "Apple MacBook Pro",
+        "Description": "A high-performance laptop with a stunning Retina display, Touch Bar, and the Apple M1 chip.",
+        "Price": 1299.00,
+        "PictureUrl": "https://www.seekpng.com/png/detail/74-747936_macbook-png-pic-macbook-png.png",
+        "ProductTypeId": 2,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "Samsung Galaxy S21",
+        "Description": "A powerful smartphone with a 6.2-inch Dynamic AMOLED 2X display, 5G connectivity, and an advanced camera system.",
+        "Price": 799.99,
+        "PictureUrl": "https://images.samsung.com/is/image/samsung/assets/pk/2201/preorder/1_image_carousel/4_product_image/S21FE_Carousel_ProductImage_White_MO.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 2
+    },
+    {
+        "Name": "Surface Laptop 4",
+        "Description": "Sleek and versatile laptop from Microsoft",
+        "Price": 999,
+        "PictureUrl": "https://m.media-amazon.com/images/I/51U4evgpYmL.jpg",
+        "ProductTypeId": 2,
+        "ProductBrandId": 5
+    },
+    {
+        "Name": "iPhone 13 Pro",
+        "Description": "6.1-inch Super Retina XDR display. Ceramic Shield with 4x better drop performance. A15 Bionic chip.",
+        "Price": 999,
+        "PictureUrl": "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iPhone-13-Pro_iPhone-13-Pro-Max_09142021_inline.jpg.large.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "iPhone SE (2nd generation)",
+        "Description": "4.7-inch Retina HD display. A13 Bionic chip. Water and dust resistance.",
+        "Price": 399,
+        "PictureUrl": "https://www.apple.com/v/iphone-se/a/images/overview/cameras/camera__dkanf67dwbqu_large.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "iPhone 12",
+        "Description": "6.1-inch Super Retina XDR display. Ceramic Shield with 4x better drop performance. A14 Bionic chip.",
+        "Price": 799,
+        "PictureUrl": "https://www.western.co.uk/wp-content/uploads/2020/10/iPhone-12-mini-Green-VARIATION.png",
+        "ProductTypeId": 1,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "Xiaomi Mi 11 Ultra",
+        "Description": "Xiaomi's flagship smartphone with Snapdragon 888 processor, 108MP camera, and 6.81-inch AMOLED display",
+        "Price": 799.99,
+        "PictureUrl": "https://www.notebookcheck.net/uploads/tx_nbc2/Xiaomi_Mi11_Ultra_2_4.jpg",
+        "ProductTypeId": 1,
+        "ProductBrandId": 3
+    },
+    {
+        "Name": "Xiaomi Mi True Wireless Earphones 2 Basic",
+        "Description": "Wireless earphones with 20 hours of battery life, touch controls, and Bluetooth 5.0",
+        "Price": 29.99,
+        "PictureUrl": "https://mobilnitelefoni.ba/wp-content/uploads/2021/10/xiaomi-mi-true-wireless-earphones-2-basic-2.jpg",
+        "ProductTypeId": 4,
+        "ProductBrandId": 3
+    },
+    {
+        "Name": "Apple Watch Series 7",
+        "Description": "The ultimate device for a healthy life.",
+        "Price": 399.00,
+        "PictureUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/FKMY3_AV1?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1647901077187",
+        "ProductTypeId": 3,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "Samsung Galaxy Watch 4",
+        "Description": "Get ready to experience the ultimate in style and convenience.",
+        "Price": 249.99,
+        "PictureUrl": "https://static.imtec.ba/195316-large_default/samsung-galaxy-watch-4-classic-42mm-bt-silver.jpg",
+        "ProductTypeId": 3,
+        "ProductBrandId": 2
+    },
+    {
+        "Name": "Fitbit Versa 3",
+        "Description": "Take your fitness journey to the next level with the Fitbit Versa 3.",
+        "Price": 229.95,
+        "PictureUrl": "https://m.media-amazon.com/images/I/71s-OXhQNDL._AC_UF1000,1000_QL80_.jpg",
+        "ProductTypeId": 3,
+        "ProductBrandId": 6
+    },
+    {
+        "Name": "MacBook Pro 16-inch",
+        "Description": "Designed for those who defy limits and change the world.",
+        "Price": 2399.00,
+        "PictureUrl": "https://cdn.shopify.com/s/files/1/0568/5942/7015/products/MK183HN_A_1.png?v=1634727896",
+        "ProductTypeId": 2,
+        "ProductBrandId": 1
+    },
+    {
+        "Name": "Dell XPS 13",
+        "Description": "Powerful performance, stunning display, and premium design.",
+        "Price": 1299.99,
+        "PictureUrl": "https://m.media-amazon.com/images/I/81o2W1xNpzL.jpg",
+        "ProductTypeId": 2,
+        "ProductBrandId": 7
+    },
+    {
+        "Name": "HP Spectre x360",
+        "Description": "The world's smallest convertible laptop with 90% screen-to-body ratio.",
+        "Price": 1149.99,
+        "PictureUrl": "https://elektronshop.ba/wp-content/uploads/2022/02/5X7N8EA_4.jpg",
+        "ProductTypeId": 2,
+        "ProductBrandId": 8
+    }
+]
