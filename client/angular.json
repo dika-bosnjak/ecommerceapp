@@ -30,9 +30,17 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootswatch/dist/lux/_variables.scss",
+              "node_modules/bootswatch/dist/lux/bootstrap.css",
+              "node_modules/bootswatch/dist/lux/_bootswatch.scss",
+              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -98,12 +106,10 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
-              "node_modules/font-awesome/css/font-awesome.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+            ]
           }
         }
       }
