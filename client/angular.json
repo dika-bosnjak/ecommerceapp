@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/ngx-toastr/toastr.css",
               "node_modules/bootswatch/dist/lux/_variables.scss",
               "node_modules/bootswatch/dist/lux/bootstrap.css",
               "node_modules/bootswatch/dist/lux/_bootswatch.scss",
@@ -64,7 +65,13 @@
               "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
-              "namedChunks": true
+              "namedChunks": true,
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.development.ts"
+                }
+              ]
             }
           },
           "defaultConfiguration": "production"
