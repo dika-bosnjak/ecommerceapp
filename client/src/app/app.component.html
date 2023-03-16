@@ -1,11 +1,13 @@
+<ngx-spinner type="ball-spin-clockwise-fade">
+    <h3>Loading...</h3>
+</ngx-spinner>
+
 
 
 <app-nav-bar></app-nav-bar>
-<div class="container mt-5">
-    <div class="mx-2">
-        <router-outlet></router-outlet>
-    </div>
-    
-</div>
+<app-section-header></app-section-header>
 
-    
+<div class="container bg-white p-0">
+    <router-outlet></router-outlet>
+
+</div>

@@ -30,13 +30,15 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/ngx-toastr/toastr.css",
-              "node_modules/bootswatch/dist/lux/_variables.scss",
-              "node_modules/bootswatch/dist/lux/bootstrap.css",
-              "node_modules/bootswatch/dist/lux/_bootswatch.scss",
-              "node_modules/bootstrap/scss/bootstrap.scss",
+              "node_modules/ngx-spinner/animations/ball-spin-clockwise-fade.css",
+
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
+
+              "node_modules/bootswatch/dist/lux/bootstrap.min.css",
+
               "node_modules/font-awesome/css/font-awesome.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.scss"
             ],
             "scripts": [

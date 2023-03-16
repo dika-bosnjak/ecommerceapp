@@ -1,0 +1,14 @@
+<ng-container *ngIf="$any(bcService.breadcrumbs$ | async) as breadcrumbs">
+    <section class="py-5" style="height: 70px;"
+        *ngIf="breadcrumbs[breadcrumbs.length-1].label !== 'Home'">
+        <div class="container mt-2">
+            <nav aria-label="breadcrumb">
+                <xng-breadcrumb class="me-5">
+                    <ng-container *xngBreadcrumbItem="let breadcrumb">
+                        {{breadcrumb | titlecase}}
+                    </ng-container>
+                </xng-breadcrumb>
+            </nav>
+        </div>
+    </section>
+</ng-container>

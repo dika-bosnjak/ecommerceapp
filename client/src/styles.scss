@@ -1,13 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+label.xng-breadcrumb-trail {
+    color: blue;
+}
 
-@import "../node_modules/bootswatch/dist/lux/_variables";
-@import "../node_modules/bootswatch/dist/lux/bootstrap.css";
-@import "../node_modules/bootswatch/dist/lux/_bootswatch";
+body {
+    background-color: #ededed;
+}
 
-/* Importing Bootstrap SCSS file. */
-@import "../node_modules/bootstrap/scss/bootstrap";
-
-/* Importing Datepicker SCSS file. */
-@import "../node_modules/ngx-bootstrap/datepicker/bs-datepicker";
-
-
+.bg-primary, .list-group-item.active {
+    background-color: rgb(52,58,64);
+}

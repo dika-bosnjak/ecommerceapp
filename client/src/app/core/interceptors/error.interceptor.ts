@@ -8,7 +8,8 @@ import {
 } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
 import { NavigationExtras, Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr/public_api';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Injectable()
 export class ErrorInterceptor implements HttpInterceptor {
