@@ -18,9 +18,9 @@
         </li>
       </ul>
       <div class="d-flex algin-items-center">
-        <a href="" class="position-relative">
+        <a routerLink="/basket" class="position-relative">
           <i class="fa fa-shopping-cart fa-2x me-5 mt-3 text-white"></i>
-          <div class="cart-no">5</div>
+          <div class="cart-no" *ngIf="(basketService.basketSource$ | async) as basket">{{getCount(basket.items)}}</div>
         </a>
         <a href="" class="btn btn-secondary me-2">Login</a>
         <a href="" class="btn btn-secondary me-2">Sign up</a>
