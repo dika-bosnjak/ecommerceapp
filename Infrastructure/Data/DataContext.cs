@@ -8,7 +8,7 @@ namespace Infrastructure.Data
 
     public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions options) : base(options)
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
 
@@ -17,7 +17,7 @@ namespace Infrastructure.Data
         public DbSet<ProductBrand> ProductBrands { get; set; }
         public DbSet<ProductType> ProductTypes { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
@@ -27,7 +27,7 @@ namespace Infrastructure.Data
                 foreach (var entityType in modelBuilder.Model.GetEntityTypes())
                 {
                     var properties = entityType.ClrType.GetProperties().Where(p => p.PropertyType == typeof(decimal));
-                    foreach(var property in properties)
+                    foreach (var property in properties)
                     {
                         modelBuilder.Entity(entityType.Name).Property(property.Name).HasConversion<double>();
                     }

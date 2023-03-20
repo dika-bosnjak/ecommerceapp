@@ -1,0 +1,20 @@
+using Core.Entities.Identity;
+using Infrastructure.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
+
+namespace Infrastructure.Identity
+{
+    //identitydbcontext gives us a possibility to query a session with the identity database
+    public class AppIdentityDbContext : IdentityDbContext<AppUser>
+    {
+        public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
+    }
+}
