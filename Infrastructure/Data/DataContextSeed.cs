@@ -1,11 +1,12 @@
 using System.Text.Json;
 using Core.Entities;
+using Core.Entities.OrderAggregate;
 
 namespace Infrastructure.Data
 {
     public class DataContextSeed
     {
-        public static async Task SeedAsync(DataContext context) 
+        public static async Task SeedAsync(DataContext context)
         {
             if (!context.ProductBrands.Any())
             {
@@ -14,7 +15,7 @@ namespace Infrastructure.Data
                 context.ProductBrands.AddRange(brands);
             }
 
-             if (!context.ProductTypes.Any())
+            if (!context.ProductTypes.Any())
             {
                 var typesData = File.ReadAllText("../Infrastructure/Data/SeedData/types.json");
                 var types = JsonSerializer.Deserialize<List<ProductType>>(typesData);
@@ -26,6 +27,13 @@ namespace Infrastructure.Data
                 var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
                 var products = JsonSerializer.Deserialize<List<Product>>(productsData);
                 context.Products.AddRange(products);
+            }
+
+            if (!context.DeliveryMethods.Any())
+            {
+                var deliveryData = File.ReadAllText("../Infrastructure/Data/SeedData/delivery.json");
+                var deliveries = JsonSerializer.Deserialize<List<DeliveryMethod>>(deliveryData);
+                context.DeliveryMethods.AddRange(deliveries);
             }
 
             if (context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();
