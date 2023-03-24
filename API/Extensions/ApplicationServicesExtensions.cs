@@ -19,6 +19,8 @@ namespace API.Extensions
                 opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
             });
 
+            services.AddSingleton<IResponseCacheService, ResponseCacheService>();
+
             services.AddSingleton<IConnectionMultiplexer>(c =>
             {
                 var options = ConfigurationOptions.Parse(config.GetConnectionString("Redis"));
@@ -27,8 +29,9 @@ namespace API.Extensions
 
             services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<IOrderService, OrderService>();
 
+            services.AddScoped<IPaymentService, PaymentService>();
+            services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<ITokenService, TokenService>();
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));

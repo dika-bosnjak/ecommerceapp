@@ -42,18 +42,29 @@ namespace Infrastructure.Services
             //calc subtotal
             var subtotal = items.Sum(item => item.Price * item.Quantity);
 
-            //create order
-            var order = new Order(items, buyerEmail, shippingAddress, deliveryMethod, subtotal);
+            // check to see if order exists
+            var spec = new OrderByPaymentIntentIdSpecification(basket.PaymentIntentId);
+            var order = await _orderRepo.GetEntityWithSpecification(spec);
 
-            // TODO: save to db
-            _orderRepo.Add(order);
+            if (order != null)
+            {
+                order.ShipToAddress = shippingAddress;
+                order.DeliveryMethod = deliveryMethod;
+                order.Subtotal = subtotal;
+
+                _orderRepo.Update(order);
+            }
+            else
+            {
+                order = new Order(items, buyerEmail, shippingAddress, deliveryMethod, subtotal, basket.PaymentIntentId);
+
+                _orderRepo.Add(order);
+            }
+
+
             var result = await _orderRepo.SaveChanges();
 
             if (result <= 0) return null;
-
-            //delete basket
-            await _basketRepo.DeleteBasketAsync(basketId);
-
 
             //return order
             return order;
