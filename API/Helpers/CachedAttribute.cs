@@ -8,7 +8,6 @@ namespace API.Helpers
     public class CachedAttribute : Attribute, IAsyncActionFilter
     {
         private readonly int _timeToLiveSeconds;
-
         public CachedAttribute(int timeToLiveSeconds)
         {
             _timeToLiveSeconds = timeToLiveSeconds;
@@ -49,13 +48,12 @@ namespace API.Helpers
 
             keyBuilder.Append($"{request.Path}");
 
-            foreach (var (key, value) in request.Query.OrderBy(x => request.Query.OrderBy(x => x.Key)))
+            foreach (var (key, value) in request.Query.OrderBy(x => x.Key))
             {
                 keyBuilder.Append($"|{key}-{value}");
             }
 
             return keyBuilder.ToString();
         }
-
     }
 }
